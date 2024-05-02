@@ -1,5 +1,6 @@
 import "./Expenses.css"
 import ExpenseItem from './ExpenseItem'; // Import the ExpenseItem component
+import Card from "./Card"
 
 function Expenses() {
   const expenses = [
@@ -10,7 +11,7 @@ function Expenses() {
   ];
 
   return (
-    <div>
+    <Card>
       {expenses.map((expense) => (
         <ExpenseItem
           key={expense.id}
@@ -19,7 +20,7 @@ function Expenses() {
           price={expense.price}
         />
       ))}
-    </div>
+    </Card>
   );
 }
 
